@@ -1,0 +1,19 @@
+name: flutter_secure_storage_platform_interface
+description: A common platform interface for the flutter_secure_storage plugin.
+homepage: https://github.com/mogol/flutter_secure_storage
+version: 1.0.2
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.7.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lint: ^2.1.2
+  mockito: ^5.4.2
