@@ -47,6 +47,8 @@ void main() {
 
       if (methodCall.method == 'containsKey') {
         return true;
+      } else if (methodCall.method == 'isProtectedDataAvailable') {
+        return true;
       }
 
       return null;
@@ -59,9 +61,7 @@ void main() {
     const options = <String, String>{};
     const key = 'test_key';
 
-    tearDown(() {
-      log.clear();
-    });
+    tearDown(log.clear);
 
     test('read', () async {
       await storage.read(key: key, options: options);
@@ -170,5 +170,11 @@ void main() {
         ],
       );
     });
+
+    // test('isProtectedDataAvailable', () async {
+    //   final result = await storage.isCupertinoProtectedDataAvailable();
+    //
+    //   expect(result, true);
+    // });
   });
 }
